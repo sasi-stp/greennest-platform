@@ -1,4 +1,4 @@
-# 🌿 GreenNest Platform Architecture
+# 🌿 GreenNest Platform Architecture 
 
 ## Overview
 
