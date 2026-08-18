@@ -1,0 +1,366 @@
+
+:root {
+  --primary-green: #183827;
+  --primary-hover: #10261a;
+  --accent-green: #2a5f40;
+  --light-green-bg: #eef6f0;
+  --cream-bg: #faf9f6;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #f8faf9;
+  --border-color: #e2e8f0;
+  --white: #ffffff;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+.container {
+  width: 92%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background-color: var(--primary-green);
+  color: #d1fae5;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-left, .bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Header Navigation */
+.main-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 16px 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  font-size: 1.1rem;
+}
+
+.logo-text .brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  line-height: 1;
+  display: block;
+}
+
+.logo-text .tagline {
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f1f5f9;
+  border-radius: 50px;
+  padding: 6px 14px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.85rem;
+  width: 150px;
+}
+
+.search-box button {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.icon-btn {
+  background: transparent;
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  position: relative;
+  padding: 6px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  background: var(--primary-green);
+  color: var(--white);
+  font-size: 0.68rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Page Banner */
+.page-banner {
+  background: linear-gradient(135deg, #183827 0%, #2a5f40 100%);
+  color: var(--white);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.page-banner p {
+  color: #d1fae5;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 12px 26px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #0d1e15;
+  color: #94a3b8;
+  padding: 60px 0 30px;
+  border-top: 1px solid #1c3d2c;
+  margin-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+  color: #6ee7b7;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 25px;
+  border-top: 1px solid #162f22;
+  font-size: 0.85rem;
+}
+
+/* Cart Drawer */
+.cart-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 998;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 380px;
+  height: 100%;
+  background: var(--white);
+  z-index: 999;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+}
+
+.cart-drawer.open { right: 0; }
+.cart-drawer-overlay.open { display: block; }
+
+.drawer-header {
+  padding: 18px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-drawer { font-size: 1.6rem; background: transparent; }
+
+.drawer-items { flex: 1; padding: 18px; overflow-y: auto; }
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-row img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.drawer-footer {
+  padding: 18px;
+  border-top: 1px solid var(--border-color);
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.btn-checkout {
+  width: 100%;
+  justify-content: center;
+  padding: 12px;
+}
+
+/* Toast */
+.toast-notification {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--primary-green);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
+  font-size: 0.88rem;
+  display: none;
+  z-index: 1000;
+}
