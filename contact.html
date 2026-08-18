@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | GreenNest Botanical Studio</title>
+  
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- GreenNest Master Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Hotline Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div class="top-highlight">
+        <i class="fa-solid fa-shield-halved"></i> Premium Quality Plants • Direct From Our Dedicated Nursery
+      </div>
+      <div>
+        <a href="https://wa.me/94770040590" target="_blank" class="top-whatsapp-link">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Order: 0770040590
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-art">
+          <img src="GreenNest fb profile picture.png" alt="GreenNest Logo">
+        </div>
+        <div class="logo-titles">
+          <span class="logo-name">GreenNest</span>
+          <span class="logo-sub">PLANTS FOR LIFE</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="shop.html" class="nav-item">Shop Foliage</a>
+          <a href="about.html" class="nav-item">About Us</a>
+          <a href="care-guide.html" class="nav-item">Care Guide</a>
+          <a href="blog.html" class="nav-item">Botanical Journal</a>
+          <a href="contact.html" class="nav-item active">Contact Us</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn" id="openCartBtn" title="View Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="luxury-banner">
+    <div class="container">
+      <span class="banner-sub">DIRECT NURSERY HOTLINE</span>
+      <h1 class="banner-title">Contact GreenNest</h1>
+      <p class="banner-desc">Ready to bring lush green foliage home? Connect with our botanical team instantly.</p>
+    </div>
+  </div>
+
+  <section style="padding: 70px 0;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px;">
+      <div>
+        <span class="banner-sub">FAST RESPONSE</span>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--primary-gold); margin: 10px 0 20px;">We are one message away.</h2>
+        <p style="color: var(--text-muted); margin-bottom: 30px;">Direct orders, bulk nursery inquiries, and custom plant pots.</p>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 20px;">
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div class="trust-icon-ring" style="background: #25D366; color: #000; border-color: #25D366; font-size: 1.8rem;"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <span style="font-size: 0.75rem; color: var(--emerald-light); font-weight: 800; letter-spacing: 1px;">OFFICIAL WHATSAPP HOTLINE</span>
+              <h3 style="font-size: 1.4rem; color: var(--text-pure); font-weight: 800;">0770040590</h3>
+              <a href="https://wa.me/94770040590" target="_blank" style="color: var(--primary-gold); font-size: 0.85rem; font-weight: 700;">Click to open WhatsApp Chat &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+          <div class="trust-icon-ring"><i class="fa-solid fa-location-dot"></i></div>
+          <div><h4 style="color: var(--primary-gold);">Greenhouse Facilities</h4><p style="color: var(--text-muted); font-size: 0.85rem;">Dedicated Nurseries in Colombo & Kurunegala, Sri Lanka</p></div>
+        </div>
+      </div>
+
+      <!-- Instant WhatsApp Inquiry Generator Form -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 35px;">
+        <h3 style="font-family: var(--font-display); color: var(--primary-gold); font-size: 1.4rem; margin-bottom: 20px;">Send Quick Plant Inquiry</h3>
+        <form onsubmit="handleDirectInquiry(event)">
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 0.85rem; color: var(--text-cream); margin-bottom: 6px; font-weight: 600;">Your Name</label>
+            <input type="text" id="custName" required placeholder="Ex: Kasun Perera" style="width: 100%; padding: 12px 16px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); color: #fff; font-family: inherit;">
+          </div>
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 0.85rem; color: var(--text-cream); margin-bottom: 6px; font-weight: 600;">Your Location / City</label>
+            <input type="text" id="custCity" required placeholder="Ex: Colombo 07 / Kandy" style="width: 100%; padding: 12px 16px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); color: #fff; font-family: inherit;">
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 0.85rem; color: var(--text-cream); margin-bottom: 6px; font-weight: 600;">Plant Requirements / Message</label>
+            <textarea id="custMsg" rows="4" required placeholder="I would like to purchase Monstera / Need plants for my balcony..." style="width: 100%; padding: 12px 16px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); color: #fff; font-family: inherit;"></textarea>
+          </div>
+          <button type="submit" class="btn-whatsapp-checkout">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Send to WhatsApp (0770040590)
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function handleDirectInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById("custName").value;
+      const city = document.getElementById("custCity").value;
+      const message = document.getElementById("custMsg").value;
+
+      const formatted = 
+`🌿 *GreenNest - Direct Customer Message* 🌿
+----------------------------------------
+👤 *Customer Name:* ${name}
+📍 *Location:* ${city}
+💬 *Message:* ${message}
+
+Hello GreenNest! I submitted this form from your website. Please get back to me.`;
+
+      const url = `https://wa.me/94770040590?text=${encodeURIComponent(formatted)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/94770040590?text=Hello%20GreenNest!%20I%20would%20like%20to%20inquire%20about%20your%20premium%20foliage%20plants." target="_blank" class="whatsapp-pulse-btn">
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+    <span>Order on WhatsApp: 0770040590</span>
+  </a>
+
+  <!-- Master Footer -->
+  <footer class="luxury-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo" style="margin-bottom: 10px;">
+          <div class="logo-art"><img src="GreenNest fb profile picture.png" alt="GreenNest"></div>
+          <div class="logo-titles"><span class="logo-name">GreenNest</span><span class="logo-sub">PLANTS FOR LIFE</span></div>
+        </div>
+        <p>හර්තයි ජීවිතය, හරිතයි අපේ අනාගතය. We cultivate, preserve and supply exquisite live foliage plants for luxury interior aesthetics and healthy living spaces.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop Plants</a></li>
+          <li><a href="about.html">About GreenNest</a></li>
+          <li><a href="care-guide.html">Care Instructions</a></li>
+          <li><a href="blog.html">Botanical Journal</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Customer Care</h4>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/94770040590" target="_blank">Direct WhatsApp Helpline</a></li>
+          <li><a href="care-guide.html">Plant Consultation</a></li>
+          <li><a href="contact.html">Islandwide Delivery Info</a></li>
+          <li><a href="contact.html">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Hotline & Studio</h4>
+        <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i> <strong>0770040590</strong></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> +94 77 004 0590</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Colombo / Kurunegala Nursery Facilities, Sri Lanka</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> contact@greennest.lk</div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 GreenNest™ Botanical Studio. All Rights Reserved. LIVE GREEN • LOVE GREEN • STAY GREEN</p>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlayEl"></div>
+  <aside class="cart-drawer" id="cartDrawerEl">
+    <div class="cart-head">
+      <h3>Your Botanical Bag</h3>
+      <button class="cart-close" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-body" id="cartItemList">
+      <!-- Items Injected by script.js -->
+    </div>
+    <div class="cart-foot">
+      <div class="cart-total-bar">
+        <span>Subtotal:</span>
+        <span id="cartTotalVal">LKR 0.00</span>
+      </div>
+      <button class="btn-whatsapp-checkout" onclick="checkoutEntireCartWhatsApp()">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Checkout Entire Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- Global Toast -->
+  <div class="toast-msg" id="toastBox"></div>
+  <script src="script.js"></script>
+</body>
+</html>
