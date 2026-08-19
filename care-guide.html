@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Care Guide | GreenNest Botanical Studio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Hotline Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div class="top-highlight">
+        <i class="fa-solid fa-shield-halved"></i> 100% Guaranteed Rooted Health • Islandwide Safe Eco-Delivery
+      </div>
+      <div>
+        <a href="https://wa.me/94770040590" target="_blank" class="top-whatsapp-link">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Orders: 077 004 0590
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-art">
+          <img src="GreenNest fb profile picture.png" alt="GreenNest Logo">
+        </div>
+        <div class="logo-titles">
+          <span class="logo-name">GreenNest</span>
+          <span class="logo-sub">PLANTS FOR LIFE</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="starter-kit.html" class="nav-item">Plant Starter Kit</a>
+          <a href="shop.html" class="nav-item">Shop Foliage</a>
+          <a href="care-guide.html" class="nav-item active">Care Guide</a>
+          <a href="about.html" class="nav-item">About Us</a>
+          <a href="contact.html" class="nav-item">Contact Us</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Cart Button -->
+        <button class="cart-icon-btn" id="openCartBtn" title="View Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <!-- User Authentication Widget -->
+        <div class="auth-widget">
+          <button class="btn-auth-trigger" id="authTriggerBtn" onclick="openAuthModal('signup')">
+            <i class="fa-regular fa-user"></i> Sign In / Sign Up
+          </button>
+          
+          <div class="user-profile-badge" id="userProfileBadge">
+            <i class="fa-solid fa-crown" style="color: var(--gold);"></i>
+            <span id="authUserName" style="font-weight:700; font-size:0.85rem; color:#fff;">User</span>
+            <span class="user-vip-tag">VIP MEMBER</span>
+            <button class="btn-logout" onclick="logoutUser()" title="Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="container" style="padding: 50px 0 80px;">
+    
+    <div class="guide-container-card">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+        <span class="user-vip-tag" style="font-size: 0.85rem; padding: 5px 16px;">OFFICIAL GREENNEST MANUAL</span>
+        <h1 style="font-family: var(--font-serif); font-size: 3rem; color: var(--gold); margin: 15px 0;">
+          PLANT CARE GUIDE
+        </h1>
+        <h3 style="font-size: 1.2rem; color: var(--emerald); margin-bottom: 12px;">
+          ඔබේ පැළය නිරෝගීව හා ලස්සනට වර්ධනය කරගන්න සරල මාර්ගෝපදේශය
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8;">
+          <strong>Welcome to GreenNest 🌱</strong><br>
+          ඔබේ GreenNest Plant Starter Kit එක තෝරාගත් ඔබට ස්තූතියි! ඔබේ නව පැළය ලස්සනට හා නිරෝගීව තබාගැනීමට අවශ්‍ය මූලික උපදෙස් මෙහි අඩංගු වේ. සෑම පැළයකටම අවශ්‍ය ජලය සහ ආලෝක ප්‍රමාණය වෙනස් විය හැකි බැවින්, පැළයේ තත්ත්වය අනුව රැකබලා ගන්න.
+        </p>
+      </div>
+
+      <!-- 01. Lighting -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">☀️</span>
+          <h2 class="guide-step-title">01. ආලෝකය</h2>
+        </div>
+        <p style="margin-bottom: 8px;">🌱 පැළය <strong>bright indirect light</strong> ලැබෙන ස්ථානයක තබන්න.</p>
+        <p style="color: var(--emerald); margin-bottom: 6px;">✅ ජනේලයක් අසල, නමුත් තද සෘජු හිරු එළියෙන් මදක් ඈත්ව තැබීම සුදුසුය.</p>
+        <p style="color: #f87171; margin-bottom: 6px;">❌ දහවල් කාලයේ දැඩි සෘජු හිරු එළියට දිගු වේලාවක් තබන්න එපා.</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">💡 ගෘහස්ථ ස්ථානයක ආලෝකය අඩු නම්, පැළයේ වර්ධනය මන්දගාමී විය හැක.</p>
+      </div>
+
+      <!-- 02. Watering -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">💧</span>
+          <h2 class="guide-step-title">02. ජලය දැමීම</h2>
+        </div>
+        <p style="font-weight: 700; color: var(--gold); margin-bottom: 8px;">Calendar එක බලලා පමණක් ජලය දමන්න එපා.</p>
+        <p style="margin-bottom: 8px;">පසෙහි ඉහළ කොටස ඇඟිල්ලෙන් පරීක්ෂා කරන්න.</p>
+        <p style="margin-bottom: 6px;">🌱 ඉහළ <strong>2–3 cm</strong> පස වියළි නම් &rarr; ජලය දමන්න.</p>
+        <p style="margin-bottom: 6px;">💧 ජලය දමන විට පස සම්පූර්ණයෙන් තෙත් වන තුරු මදින් ජලය දමා, අතිරික්ත ජලය පහළ drainage holes හරහා පිටවීමට ඉඩ දෙන්න.</p>
+        <p style="color: #f87171; margin-bottom: 8px;">❌ පැළය නිතරම ජලයේ තෙත් වී තිබීමට ඉඩ නොදෙන්න.</p>
+        <div style="background: rgba(46, 230, 132, 0.1); border-left: 3px solid var(--emerald); padding: 8px 14px; border-radius: 4px; font-size: 0.88rem;">
+          <strong>Tip:</strong> ජලය වැඩිපුර දැමීම indoor plants මියයාමට පොදු හේතුවකි.
+        </div>
+      </div>
+
+      <!-- 03. Pot & Drainage -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">🪴</span>
+          <h2 class="guide-step-title">03. Pot & Drainage</h2>
+        </div>
+        <p style="margin-bottom: 8px;">ඔබේ pot එකේ <strong>drainage holes</strong> තිබීම ඉතා වැදගත්ය. අතිරික්ත ජලය පිටවීමට නොහැකි නම් root rot ඇති විය හැක.</p>
+        <p style="color: var(--emerald); margin-bottom: 4px;">🟢 Pot එකේ පහළට drainage holes තිබේද පරීක්ෂා කරන්න.</p>
+        <p style="color: var(--emerald); margin-bottom: 4px;">🟢 Saucer එකේ එකතු වන අතිරික්ත ජලය ඉවත් කරන්න.</p>
+        <p style="color: #f87171;">🔴 පැළයේ pot එක දිගු වේලාවක් ජලය තුළ තබන්න එපා.</p>
+      </div>
+
+      <!-- 04. Potting Mix -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">🌱</span>
+          <h2 class="guide-step-title">04. Potting Mix</h2>
+        </div>
+        <p style="margin-bottom: 8px;">GreenNest Starter Kit එකේ ඇති <strong>Premium Potting Mix</strong> එක පැළයේ හොඳ වර්ධනය සඳහා භාවිතා කළ හැක.</p>
+        <p style="color: var(--text-muted); margin-bottom: 12px;">පස ඉතා තද වී ජලය බැස නොයන්නේ නම්, එය වෙනස් කර වඩා හොඳ drainage සහිත potting mix එකක් භාවිතා කරන්න.</p>
+        <div style="background: rgba(226, 183, 85, 0.1); border: 1px solid var(--border-gold); padding: 10px; border-radius: 6px; text-align: center; font-weight: 700; color: var(--gold);">
+          🟤 Potting Mix + 🌱 Roots + 💧 Good Drainage = <strong>Healthy Plant</strong>
+        </div>
+      </div>
+
+      <!-- 05. Fertilizer / Plant Food -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">🌿</span>
+          <h2 class="guide-step-title">05. Fertilizer / Plant Food</h2>
+        </div>
+        <p style="margin-bottom: 6px;">පැළයට ආහාර අවශ්‍ය වන්නේ වර්ධනය වන කාලයේදීය.</p>
+        <p style="margin-bottom: 6px;">🌱 මුලින්ම පැළය අලුත් pot එකකට මාරු කළ පසු <strong>සති 2–4ක්</strong> පමණ fertilizer නොදීම වඩා සුදුසුය.</p>
+        <p style="margin-bottom: 6px;">ඉන්පසු ඔබට ලබා දී ඇති Plant Food එකේ label එකේ සඳහන් dosage එකට අනුව භාවිතා කරන්න.</p>
+        <p style="color: #f87171;">❌ වැඩිපුර fertilizer දැමීමෙන් roots වලට හානි විය හැක.</p>
+      </div>
+
+      <!-- 06. Leaf Cleaning -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">🧹</span>
+          <h2 class="guide-step-title">06. කොළ පිරිසිදු කිරීම</h2>
+        </div>
+        <p style="margin-bottom: 6px;">කොළ මත දූවිලි එකතු වීමෙන් පැළයේ පෙනුමට සහ photosynthesis ක්‍රියාවලියට බලපෑම් ඇති විය හැක.</p>
+        <p style="margin-bottom: 6px;">🧽 මෘදු තෙත් රෙදි කැබැල්ලකින් කොළ මෘදුව පිස දමන්න.</p>
+        <p style="color: #f87171;">❌ කොළ මත detergent, soap හෝ household cleaning chemicals භාවිතා නොකරන්න.</p>
+      </div>
+
+      <!-- 07. Trimming -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">✂️</span>
+          <h2 class="guide-step-title">07. වියළුණු කොළ ඉවත් කිරීම</h2>
+        </div>
+        <p style="margin-bottom: 6px;">කොළයක් සම්පූර්ණයෙන්ම කහ/වියළී ගොස් ඇත්නම් පිරිසිදු scissors එකකින් ඉවත් කළ හැක.</p>
+        <p style="color: var(--emerald);">✂️ වියළුණු කොළ සහ branches ඉවත් කිරීමෙන් පැළයට නව වර්ධනය සඳහා ශක්තිය යොමු කිරීමට උපකාරී වේ.</p>
+      </div>
+
+      <!-- 08. Pest Check -->
+      <div class="guide-step-card">
+        <div class="guide-step-header">
+          <span class="kit-icon-badge">🐛</span>
+          <h2 class="guide-step-title">08. Pest Check</h2>
+        </div>
+        <p style="margin-bottom: 8px;">සතියකට වරක් පැළය පරීක්ෂා කරන්න. විශේෂයෙන් බලන්න:</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">• කොළවල යට පැත්ත &nbsp;|&nbsp; • නව කොළ &nbsp;|&nbsp; • කඳ අවට &nbsp;|&nbsp; • පස මතුපිට</p>
+        <p style="color: var(--gold); margin-top: 8px;">🐜 කුඩා කෘමීන්, web වැනි දේ හෝ කොළවල අසාමාන්‍ය පැල්ලම් පෙනේ නම් පැළය වෙනත් පැළවලින් තාවකාලිකව වෙන් කර තබන්න.</p>
+      </div>
+
+      <!-- Simple Weekly Routine -->
+      <div style="margin: 40px 0;">
+        <h2 style="font-family: var(--font-serif); color: var(--gold); font-size: 1.8rem; text-align: center; margin-bottom: 20px;">
+          🌱 SIMPLE WEEKLY ROUTINE
+        </h2>
+        <div class="weekly-routine-grid">
+          <div class="routine-day-card">
+            <div class="routine-day-name">MONDAY</div>
+            <p>☀️ ආලෝකය පරීක්ෂා කරන්න</p>
+          </div>
+          <div class="routine-day-card">
+            <div class="routine-day-name">WEDNESDAY</div>
+            <p>💧 පසෙහි තෙතමනය පරීක්ෂා කරන්න</p>
+          </div>
+          <div class="routine-day-card">
+            <div class="routine-day-name">FRIDAY</div>
+            <p>🧹 කොළ පිරිසිදු කරන්න</p>
+          </div>
+          <div class="routine-day-card">
+            <div class="routine-day-name">SUNDAY</div>
+            <p>🔍 Pest / leaf check එකක් කරන්න</p>
+          </div>
+        </div>
+        <p style="text-align: center; color: var(--emerald); font-weight: 700; margin-top: 15px;">
+          💚 Observe &rarr; Water &rarr; Clean &rarr; Care
+        </p>
+      </div>
+
+      <!-- Common Problems -->
+      <div class="guide-step-card" style="border-color: rgba(239, 68, 68, 0.4);">
+        <h2 style="font-family: var(--font-serif); color: #f87171; font-size: 1.6rem; margin-bottom: 15px;">
+          ⚠️ Common Problems
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <div>
+            <h4 style="color: var(--gold); margin-bottom: 6px;">🍂 කොළ කහ වීම</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">• ජලය වැඩිපුර දැමීම<br>• ආලෝකය අඩුවීම<br>• ස්වභාවිකව පැරණි කොළ වීම</p>
+          </div>
+          <div>
+            <h4 style="color: var(--gold); margin-bottom: 6px;">🥀 කොළ වැටීම / මැලවීම</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">• ජලය අඩුවීම<br>• ජලය වැඩිපුර දැමීම<br>• ස්ථානය හදිසියේ වෙනස් කිරීම</p>
+          </div>
+          <div>
+            <h4 style="color: var(--gold); margin-bottom: 6px;">🟤 කොළ අග දුඹුරු වීම</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">• පස වියළීම<br>• වායු තෙතමනය අඩුවීම<br>• fertilizer වැඩිපුර භාවිතය</p>
+          </div>
+        </div>
+        <p style="margin-top: 15px; font-weight: 700; color: var(--gold); text-align: center;">
+          Problem එකක් දැක්කම මුලින්ම ජලය වැඩි කරන්න එපා. පස, ආලෝකය සහ drainage පරීක්ෂා කරන්න.
+        </p>
+      </div>
+
+      <!-- Repotting -->
+      <div class="guide-step-card">
+        <h2 style="font-family: var(--font-serif); color: var(--gold); font-size: 1.5rem; margin-bottom: 10px;">
+          🪴 WHEN SHOULD I REPOT?
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-cream); line-height: 1.8;">
+          පැළයේ roots pot එකෙන් පිටතට පැමිණෙනවා නම්, පස ඉතා ඉක්මනින් වියළෙනවා නම් හෝ පැළය pot එකට සාපේක්ෂව විශාල වී ඇත්නම් repot කිරීම සලකා බලන්න.<br>
+          සාමාන්‍යයෙන් <strong>අවශ්‍යතාවය අනුව</strong>, එකවර ඉතා විශාල pot එකකට මාරු නොකර, පෙර pot එකට වඩා තරමක් විශාල pot එකක් තෝරන්න.
+        </p>
+      </div>
+
+      <!-- Golden Rules -->
+      <div class="golden-rules-banner">
+        <h2 style="font-family: var(--font-serif); color: var(--gold); font-size: 1.8rem;">
+          💚 YOUR PLANT'S GOLDEN RULES
+        </h2>
+        <div class="golden-rules-grid">
+          <span class="golden-badge">☀️ Bright Light</span>
+          <span class="golden-badge">💧 Don't Overwater</span>
+          <span class="golden-badge">🌱 Good Drainage</span>
+          <span class="golden-badge">🧹 Keep Leaves Clean</span>
+          <span class="golden-badge">🌿 Feed Carefully</span>
+          <span class="golden-badge">🔍 Check Regularly</span>
+          <span class="golden-badge">❤️ Give It Time</span>
+        </div>
+      </div>
+
+      <!-- Sign off -->
+      <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--border-gold);">
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--emerald); margin-bottom: 10px;">
+          🌿 Grow Green. Live Better.
+        </h3>
+        <p style="font-size: 1.05rem; color: var(--text-cream); margin-bottom: 15px;">
+          ඔබේ පැළය රැකබලා ගැනීම කියන්නේ එයට ජලය දැමීම පමණක් නොවේ.<br>
+          <strong>Observe it. Understand it. Care for it.</strong>
+        </p>
+        <p style="color: var(--gold); font-weight: 700; font-size: 1.1rem;">
+          Thank you for growing with GreenNest! 💚
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/94770040590?text=Hello%20GreenNest!%20I%20would%20like%20to%20inquire%20about%20your%20premium%20foliage%20plants." target="_blank" class="whatsapp-pulse-btn">
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+    <span>WhatsApp Hotline: 077 004 0590</span>
+  </a>
+
+  <!-- Master Footer -->
+  <footer class="luxury-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo" style="margin-bottom: 15px;">
+          <div class="logo-art"><img src="GreenNest fb profile picture.png" alt="GreenNest"></div>
+          <div class="logo-titles"><span class="logo-name">GreenNest</span><span class="logo-sub">PLANTS FOR LIFE</span></div>
+        </div>
+        <p>හර්තයි ජීවිතය, හරිතයි අපේ අනාගතය. Bringing nature closer to you with premium indoor, outdoor, and ornamental foliage.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="starter-kit.html">Plant Starter Kit</a></li>
+          <li><a href="shop.html">Shop Foliage</a></li>
+          <li><a href="care-guide.html">Plant Care Guide</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Member Privileges</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="openAuthModal('signup'); return false;">VIP Member Discounts</a></li>
+          <li><a href="starter-kit.html">Starter Kit Unboxing</a></li>
+          <li><a href="https://wa.me/94770040590" target="_blank">Direct Horticultural Advice</a></li>
+          <li><a href="contact.html">Islandwide Safe Delivery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Hotline & Studio</h4>
+        <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i> <strong>077 004 0590</strong></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Colombo & Kurunegala Nurseries, Sri Lanka</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> contact@greennest.lk</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-truck"></i> Islandwide Delivery Available</div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 GreenNest™ Botanical Studio. All Rights Reserved. LIVE GREEN • LOVE GREEN • STAY GREEN</p>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlayEl"></div>
+  <aside class="cart-drawer" id="cartDrawerEl">
+    <div class="cart-head">
+      <h3>Your Botanical Bag</h3>
+      <button class="cart-close" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-body" id="cartItemList"></div>
+    <div class="cart-foot">
+      <div class="cart-total-bar">
+        <span>Subtotal:</span>
+        <span id="cartTotalVal">LKR 0.00</span>
+      </div>
+      <button class="btn-whatsapp-checkout" onclick="checkoutEntireCartWhatsApp()">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Checkout Entire Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- User Sign In / Sign Up Modal -->
+  <div class="modal-overlay" id="authModalOverlay">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div class="logo-art" style="margin: 0 auto 10px; width: 44px; height: 44px;"><img src="GreenNest fb profile picture.png"></div>
+        <h3 style="font-family: var(--font-serif); color: var(--gold); font-size: 1.4rem;">GreenNest Club</h3>
+        <p style="font-size: 0.8rem; color: var(--emerald);">Sign in to unlock exclusive 15-20% VIP Discounts!</p>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" id="tabBtnSignup" onclick="switchAuthTab('signup')">Sign Up</button>
+        <button class="modal-tab-btn" id="tabBtnLogin" onclick="switchAuthTab('login')">Sign In</button>
+      </div>
+
+      <!-- Signup Form -->
+      <form id="formSignup" onsubmit="handleAuthSubmit(event, 'signup')">
+        <div class="form-group">
+          <label>Your Full Name</label>
+          <input type="text" id="signupName" required placeholder="Ex: Nuwan Pradeep">
+        </div>
+        <div class="form-group">
+          <label>WhatsApp / Phone Number</label>
+          <input type="tel" required placeholder="Ex: 077 123 4567">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="signupEmail" required placeholder="name@example.com">
+        </div>
+        <button type="submit" class="btn-form-submit">
+          <i class="fa-solid fa-crown"></i> Register & Unlock Member Offers
+        </button>
+      </form>
+
+      <!-- Signin Form -->
+      <form id="formLogin" style="display: none;" onsubmit="handleAuthSubmit(event, 'login')">
+        <div class="form-group">
+          <label>Email or WhatsApp Number</label>
+          <input type="text" id="loginName" required placeholder="name@example.com / 0770000000">
+        </div>
+        <div class="form-group">
+          <label>Password / Pin</label>
+          <input type="password" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-form-submit">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In to Account
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Global Toast Box -->
+  <div class="toast-msg" id="toastBox"></div>
+  <script src="script.js"></script>
+</body>
+</html>

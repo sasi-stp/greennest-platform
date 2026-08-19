@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | GreenNest Botanical Studio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Hotline Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div class="top-highlight">
+        <i class="fa-solid fa-shield-halved"></i> 100% Guaranteed Rooted Health • Islandwide Safe Eco-Delivery
+      </div>
+      <div>
+        <a href="https://wa.me/94770040590" target="_blank" class="top-whatsapp-link">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Orders: 077 004 0590
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <nav class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-art">
+          <img src="GreenNest fb profile picture.png" alt="GreenNest Logo">
+        </div>
+        <div class="logo-titles">
+          <span class="logo-name">GreenNest</span>
+          <span class="logo-sub">PLANTS FOR LIFE</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="starter-kit.html" class="nav-item">Plant Starter Kit</a>
+          <a href="shop.html" class="nav-item">Shop Foliage</a>
+          <a href="care-guide.html" class="nav-item">Care Guide</a>
+          <a href="about.html" class="nav-item active">About Us</a>
+          <a href="contact.html" class="nav-item">Contact Us</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Cart Button -->
+        <button class="cart-icon-btn" id="openCartBtn" title="View Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <!-- User Authentication Widget -->
+        <div class="auth-widget">
+          <button class="btn-auth-trigger" id="authTriggerBtn" onclick="openAuthModal('signup')">
+            <i class="fa-regular fa-user"></i> Sign In / Sign Up
+          </button>
+          
+          <div class="user-profile-badge" id="userProfileBadge">
+            <i class="fa-solid fa-crown" style="color: var(--gold);"></i>
+            <span id="authUserName" style="font-weight:700; font-size:0.85rem; color:#fff;">User</span>
+            <span class="user-vip-tag">VIP MEMBER</span>
+            <button class="btn-logout" onclick="logoutUser()" title="Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="container" style="padding: 60px 0 80px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+      <div>
+        <span class="user-vip-tag" style="font-size: 0.85rem; padding: 4px 14px;">WHO WE ARE</span>
+        <h1 style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--gold); margin: 15px 0;">
+          Plants For Life
+        </h1>
+        <p style="color: var(--text-cream); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+          <strong>GreenNest™</strong> යනු ශ්‍රී ලාංකීය පරිසර ලෝලීන් වෙනුවෙන් ඉහළම ප්‍රමිතියේ ගෘහස්ථ සහ විසිතුරු පත්‍ර ශාක සපයන ප්‍රමුඛතම සන්නාමයයි.
+        </p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 25px;">
+          අපගේ හරිතාගාර තුළ ප්‍රවේශමෙන් වැඩුණු සෑම පැළයක්ම ස්වභාවික වායු පිරිසිදුකාරකයක් ලෙස මෙන්ම ඔබේ නිවසේ සුඛෝපභෝගී පෙනුම වැඩිකරන කලා කෘතියක් ලෙස ක්‍රියා කරයි.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="background: var(--bg-card); border-left: 3px solid var(--gold); padding: 18px; border-radius: var(--radius-md);">
+            <h3 style="color: var(--gold); font-size: 1.6rem; font-weight: 800;">100%</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Rooted & Healthy Guarantee</span>
+          </div>
+          <div style="background: var(--bg-card); border-left: 3px solid var(--emerald); padding: 18px; border-radius: var(--radius-md);">
+            <h3 style="color: var(--emerald); font-size: 1.6rem; font-weight: 800;">Islandwide</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Secure Temperature Packing</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius: var(--radius-lg); overflow: hidden; border: 2px solid var(--border-gold); box-shadow: var(--shadow-lux);">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" style="width: 100%; display: block;">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/94770040590?text=Hello%20GreenNest!%20I%20would%20like%20to%20inquire%20about%20your%20premium%20foliage%20plants." target="_blank" class="whatsapp-pulse-btn">
+    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+    <span>WhatsApp Hotline: 077 004 0590</span>
+  </a>
+
+  <!-- Master Footer -->
+  <footer class="luxury-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo" style="margin-bottom: 15px;">
+          <div class="logo-art"><img src="GreenNest fb profile picture.png" alt="GreenNest"></div>
+          <div class="logo-titles"><span class="logo-name">GreenNest</span><span class="logo-sub">PLANTS FOR LIFE</span></div>
+        </div>
+        <p>හර්තයි ජීවිතය, හරිතයි අපේ අනාගතය. Bringing nature closer to you with premium indoor, outdoor, and ornamental foliage.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="starter-kit.html">Plant Starter Kit</a></li>
+          <li><a href="shop.html">Shop Foliage</a></li>
+          <li><a href="care-guide.html">Plant Care Guide</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Member Privileges</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="openAuthModal('signup'); return false;">VIP Member Discounts</a></li>
+          <li><a href="starter-kit.html">Starter Kit Unboxing</a></li>
+          <li><a href="https://wa.me/94770040590" target="_blank">Direct Horticultural Advice</a></li>
+          <li><a href="contact.html">Islandwide Safe Delivery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Hotline & Studio</h4>
+        <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i> <strong>077 004 0590</strong></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Colombo & Kurunegala Nurseries, Sri Lanka</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> contact@greennest.lk</div>
+        <div class="footer-contact-item"><i class="fa-solid fa-truck"></i> Islandwide Delivery Available</div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 GreenNest™ Botanical Studio. All Rights Reserved. LIVE GREEN • LOVE GREEN • STAY GREEN</p>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlayEl"></div>
+  <aside class="cart-drawer" id="cartDrawerEl">
+    <div class="cart-head">
+      <h3>Your Botanical Bag</h3>
+      <button class="cart-close" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-body" id="cartItemList"></div>
+    <div class="cart-foot">
+      <div class="cart-total-bar">
+        <span>Subtotal:</span>
+        <span id="cartTotalVal">LKR 0.00</span>
+      </div>
+      <button class="btn-whatsapp-checkout" onclick="checkoutEntireCartWhatsApp()">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Checkout Entire Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- User Sign In / Sign Up Modal -->
+  <div class="modal-overlay" id="authModalOverlay">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div class="logo-art" style="margin: 0 auto 10px; width: 44px; height: 44px;"><img src="GreenNest fb profile picture.png"></div>
+        <h3 style="font-family: var(--font-serif); color: var(--gold); font-size: 1.4rem;">GreenNest Club</h3>
+        <p style="font-size: 0.8rem; color: var(--emerald);">Sign in to unlock exclusive 15-20% VIP Discounts!</p>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" id="tabBtnSignup" onclick="switchAuthTab('signup')">Sign Up</button>
+        <button class="modal-tab-btn" id="tabBtnLogin" onclick="switchAuthTab('login')">Sign In</button>
+      </div>
+
+      <!-- Signup Form -->
+      <form id="formSignup" onsubmit="handleAuthSubmit(event, 'signup')">
+        <div class="form-group">
+          <label>Your Full Name</label>
+          <input type="text" id="signupName" required placeholder="Ex: Nuwan Pradeep">
+        </div>
+        <div class="form-group">
+          <label>WhatsApp / Phone Number</label>
+          <input type="tel" required placeholder="Ex: 077 123 4567">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="signupEmail" required placeholder="name@example.com">
+        </div>
+        <button type="submit" class="btn-form-submit">
+          <i class="fa-solid fa-crown"></i> Register & Unlock Member Offers
+        </button>
+      </form>
+
+      <!-- Signin Form -->
+      <form id="formLogin" style="display: none;" onsubmit="handleAuthSubmit(event, 'login')">
+        <div class="form-group">
+          <label>Email or WhatsApp Number</label>
+          <input type="text" id="loginName" required placeholder="name@example.com / 0770000000">
+        </div>
+        <div class="form-group">
+          <label>Password / Pin</label>
+          <input type="password" required placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-form-submit">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In to Account
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Global Toast Box -->
+  <div class="toast-msg" id="toastBox"></div>
+  <script src="script.js"></script>
+</body>
+</html>
